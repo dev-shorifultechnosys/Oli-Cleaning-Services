@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        ::-webkit-scrollbar { display: none;}
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6, .font-display {
+            font-family: 'Playfair Display', serif;
+        }
+        .scrolling-text-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .scrolling-text {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll-left 30s linear infinite;
+        }
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        .group:hover .group-hover\:block { display: block; }
+        .group .group-hover\:opacity-100 { opacity: 0; }
+        .group:hover .group-hover\:opacity-100 { opacity: 1; }
+        .group:hover .group-hover\:-translate-y-2 { transform: translateY(-0.5rem); }
+        .group:hover .group-hover\:shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'oli-green': '#84BC22',
+                        'oli-purple': '#6A3F98',
+                        'oli-cream': '#F8F6E9',
+                        'oli-dark-green': '#4B735F',
+                        'oli-text': '#333333',
+                    },
+                    fontFamily: {
+                      sans: ['Lato', 'sans-serif'],
+                      display: ['Playfair Display', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-oli-cream text-oli-text">
+
+    <!-- Header Section -->
+    <header id="header" class="sticky top-0 z-50">
+        <div id="scrolling-header" class="bg-oli-green text-white py-2 overflow-hidden">
+            <div class="scrolling-text-container flex items-center">
+                <div class="scrolling-text">
+                    <span class="mx-4">Welcome to Oli Cleaning Services</span>
+                    <i class="fa-solid fa-star text-xs mx-2"></i>
+                    <span class="mx-4">Commercial Cleaning</span>
+                    <i class="fa-solid fa-star text-xs mx-2"></i>
+                    <span class="mx-4">Office Cleaning</span>
+                    <i class="fa-solid fa-star text-xs mx-2"></i>
+                    <span class="mx-4">Small Medical Facility Cleaning</span>
+                    <i class="fa-solid fa-star text-xs mx-2"></i>
+                    <span class="mx-4">Residential Cleaning</span>
+                    <i class="fa-solid fa-star text-xs mx-2"></i>
+                    <span class="mx-4">Standard Home Cleaning</span>
+                    <i class="fa-solid fa-star text-xs mx-2"></i>
+                    <span class="mx-4">Deep Cleaning</span>
+                    <i class="fa-solid fa-star text-xs mx-2"></i>
+                    <span class="mx-4">Move-in/out Cleaning</span>
+                </div>
+                 <div class="scrolling-text" aria-hidden="true">
+                    <span class="mx-4">Welcome to Oli Cleaning Services</span>
+                    <i class="fa-solid fa-star text-xs mx-2"></i>
+                    <span class="mx-4">Commercial Cleaning</span>
+                    <i class="fa-solid fa-star text-xs mx-2"></i>
+                    <span class="mx-4">Office Cleaning</span>
+                    <i class="fa-solid fa-star text-xs mx-2"></i>
+                    <span class="mx-4">Small Medical Facility Cleaning</span>
+                    <i class="fa-solid fa-star text-xs mx-2"></i>
+                    <span class="mx-4">Residential Cleaning</span>
+                    <i class="fa-solid fa-star text-xs mx-2"></i>
+                    <span class="mx-4">Standard Home Cleaning</span>
+                    <i class="fa-solid fa-star text-xs mx-2"></i>
+                    <span class="mx-4">Deep Cleaning</span>
+                    <i class="fa-solid fa-star text-xs mx-2"></i>
+                    <span class="mx-4">Move-in/out Cleaning</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Bar Section -->
+        <nav id="main-nav" class="bg-white shadow-md">
+            <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="#">
+                        <img class="h-24 w-24 rounded-full" src="https://leanlivingjourney.com/wp-content/uploads/2025/11/Log.webp" alt="Oli Cleaning Services logo, round shape, vibrant green and purple script on a cream background with green bubble accents" />
+                    </a>
+                </div>
+                <div class="hidden lg:flex items-center space-x-6 text-sm font-bold text-oli-text">
+                    <a href="#" class="hover:text-oli-green transition-colors duration-300">Home</a>
+                    <a href="#" class="hover:text-oli-green transition-colors duration-300">About</a>
+                    <a href="#" class="hover:text-oli-green transition-colors duration-300">Why Hire Us</a>
+                    <div class="relative group">
+                        <button class="hover:text-oli-green transition-colors duration-300 flex items-center">
+                            Services <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 py-2 w-64 z-10">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-oli-cream hover:text-oli-purple">Commercial Cleaning</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-oli-cream hover:text-oli-purple">Office Cleaning</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-oli-cream hover:text-oli-purple">Medical Facility Cleaning</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-oli-cream hover:text-oli-purple">Residential Cleaning</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-oli-cream hover:text-oli-purple">Standard Home Cleaning</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-oli-cream hover:text-oli-purple">Deep Cleaning</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-oli-cream hover:text-oli-purple">Move-in/out Cleaning</a>
+                        </div>
+                    </div>
+                    <a href="#" class="hover:text-oli-green transition-colors duration-300">Commercial</a>
+                    <a href="#" class="hover:text-oli-green transition-colors duration-300">Residential</a>
+                    <a href="#" class="hover:text-oli-green transition-colors duration-300">Locations</a>
+                    <a href="#" class="hover:text-oli-green transition-colors duration-300">Blog</a>
+                    <a href="#" class="hover:text-oli-green transition-colors duration-300">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="text-oli-text hover:text-oli-purple transition-colors duration-300">
+                        <i class="fa-solid fa-search"></i>
+                    </button>
+                    <button class="bg-oli-purple text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-opacity-90 transition-all duration-300 shadow-lg">
+                        Get a Quote
+                    </button>
+                    <button class="bg-oli-green text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-opacity-90 transition-all duration-300 shadow-lg flex items-center">
+                        <i class="fa-solid fa-phone mr-2"></i> Call Now
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero-section" class="relative h-[calc(100vh-140px)] min-h-[600px] max-h-[850px] flex items-center">
+            <div class="absolute inset-0 h-full w-full">
+                <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/9cbb608373-3f4cfec20bc552e90d16.png" alt="A bright, sunlit, and immaculately clean modern living room and kitchen, showcasing sparkling surfaces. Professional cleaning service aesthetic, photorealistic." />
+                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+            </div>
+            <div class="relative container mx-auto px-6 text-center text-white">
+                <h1 class="text-5xl md:text-7xl font-extrabold font-display leading-tight mb-4">Impeccable Cleaning for Your Commercial, Residential,Small Medical facility & Move-in/out</h1>
+                <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-8">From sparkling offices to pristine homes, Oli Cleaning delivers unmatched quality and reliability you can trust.</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#" class="bg-oli-green text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transform hover:scale-105 transition-all duration-300 shadow-xl">Book Commercial Service</a>
+                    <a href="#" class="bg-white text-oli-purple px-8 py-4 rounded-full font-bold text-lg hover:bg-oli-cream transform hover:scale-105 transition-all duration-300 shadow-xl">Book Residential Service</a>
+                </div>     
+            </div>
+        </section>
+
+        <!-- Services Overview Section -->
+        <section id="services-overview" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold font-display text-oli-purple mb-4">Our Cleaning Services</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-12">We offer a comprehensive range of cleaning solutions tailored to meet your specific needs. Excellence and attention to detail are at the heart of everything we do.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Commercial Cleaning Card -->
+                    <div id="service-card-commercial" class="group bg-oli-cream p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="text-oli-green text-5xl mb-4"><i class="fa-solid fa-building"></i></div>
+                        <h3 class="text-2xl font-bold font-display text-oli-purple mb-3">Commercial Cleaning</h3>
+                        <p class="text-gray-600 mb-6">Professional cleaning for offices, medical facilities, and other commercial spaces to ensure a clean, safe, and productive environment.</p>
+                        <a href="#" class="font-bold text-oli-green hover:underline">Learn More <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                    <!-- Residential Cleaning Card -->
+                    <div id="service-card-residential" class="group bg-oli-cream p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="text-oli-green text-5xl mb-4"><i class="fa-solid fa-house-chimney"></i></div>
+                        <h3 class="text-2xl font-bold font-display text-oli-purple mb-3">Residential Cleaning</h3>
+                        <p class="text-gray-600 mb-6">From standard tidying to deep cleaning and move-in/out services, we make your home shine so you can relax and enjoy it.</p>
+                        <a href="#" class="font-bold text-oli-green hover:underline">Learn More <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                    <!-- Specialized Cleaning Card -->
+                    <div id="service-card-specialized" class="group bg-oli-cream p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="text-oli-green text-5xl mb-4"><i class="fa-solid fa-star-of-life"></i></div>
+                        <h3 class="text-2xl font-bold font-display text-oli-purple mb-3">Specialized Services</h3>
+                        <p class="text-gray-600 mb-6">Tailored cleaning solutions for specific needs, including post-construction cleanup and event services, handled with expert care.</p>
+                        <a href="#" class="font-bold text-oli-green hover:underline">Learn More <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+
+                    <!-- Office cleaning -->
+                    <div id="service-card-specialized" class="group bg-oli-cream p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="text-oli-green text-5xl mb-4"><i class="fa-solid fa-star-of-life"></i></div>
+                        <h3 class="text-2xl font-bold font-display text-oli-purple mb-3">Office cleaning Services</h3>
+                        <p class="text-gray-600 mb-6">Tailored cleaning solutions for specific needs, including post-construction cleanup and event services, handled with expert care.</p>
+                        <a href="#" class="font-bold text-oli-green hover:underline">Learn More <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+
+                    <!-- Small Medical facility cleaning -->
+                    <div id="service-card-specialized" class="group bg-oli-cream p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="text-oli-green text-5xl mb-4"><i class="fa-solid fa-star-of-life"></i></div>
+                        <h3 class="text-2xl font-bold font-display text-oli-purple mb-3">Small Medical facility cleaning Services</h3>
+                        <p class="text-gray-600 mb-6">Tailored cleaning solutions for specific needs, including post-construction cleanup and event services, handled with expert care.</p>
+                        <a href="#" class="font-bold text-oli-green hover:underline">Learn More <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+
+                    <!-- Standard home cleaning -->
+                    <div id="service-card-specialized" class="group bg-oli-cream p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="text-oli-green text-5xl mb-4"><i class="fa-solid fa-star-of-life"></i></div>
+                        <h3 class="text-2xl font-bold font-display text-oli-purple mb-3">Standard home cleaning Services</h3>
+                        <p class="text-gray-600 mb-6">Tailored cleaning solutions for specific needs, including post-construction cleanup and event services, handled with expert care.</p>
+                        <a href="#" class="font-bold text-oli-green hover:underline">Learn More <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+
+                    <!-- Deep cleaning -->
+                    <div id="service-card-specialized" class="group bg-oli-cream p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="text-oli-green text-5xl mb-4"><i class="fa-solid fa-star-of-life"></i></div>
+                        <h3 class="text-2xl font-bold font-display text-oli-purple mb-3">Deep cleaning Services</h3>
+                        <p class="text-gray-600 mb-6">Tailored cleaning solutions for specific needs, including post-construction cleanup and event services, handled with expert care.</p>
+                        <a href="#" class="font-bold text-oli-green hover:underline">Learn More <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+
+                    <!-- Move-in/out cleaning -->
+                    <div id="service-card-specialized" class="group bg-oli-cream p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="text-oli-green text-5xl mb-4"><i class="fa-solid fa-star-of-life"></i></div>
+                        <h3 class="text-2xl font-bold font-display text-oli-purple mb-3">Move-in/out cleaning Services</h3>
+                        <p class="text-gray-600 mb-6">Tailored cleaning solutions for specific needs, including post-construction cleanup and event services, handled with expert care.</p>
+                        <a href="#" class="font-bold text-oli-green hover:underline">Learn More <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+
+                    <!-- Move-in/out cleaning -->
+                    <div id="service-card-specialized" class="group bg-oli-cream p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <!-- <div class="text-oli-green text-5xl mb-4"><i class="fa-solid fa-star-of-life"></i></div>
+                        <h3 class="text-2xl font-bold font-display text-oli-purple mb-3">Move-in/out cleaning Services</h3>
+                        <p class="text-gray-600 mb-6">Tailored cleaning solutions for specific needs, including post-construction cleanup and event services, handled with expert care.</p>
+                        <a href="#" class="font-bold text-oli-green hover:underline">Learn More <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div> -->
+
+                    <div class="w-[250px] h-[250px] rounded-full overflow-hidden shadow-2xl border-8 border-white">
+                        <img class="w-full h-full object-cover" src="https://leanlivingjourney.com/wp-content/uploads/2025/11/Log.webp" alt="empathetic photo of a caregiver assisting an elderly patient with a gentle smile, warm and soft lighting, medical setting" />
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about-us" class="py-24 bg-oli-cream">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-1/2 relative">
+                        <div class="h-96 rounded-2xl overflow-hidden shadow-2xl">
+                           <img class="w-full h-full object-cover" src="https://leanlivingjourney.com/wp-content/uploads/2025/11/IMG_2995.jpg" alt="A diverse and happy team of professional cleaners in uniform, smiling and standing together with cleaning equipment, bright and modern office background." />
+                        </div>
+                        <br>
+                        <div class="h-96 rounded-2xl overflow-hidden shadow-2xl">
+                           <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/2788a7b7a0-b48c29f5024e303b3ee8.png" alt="A diverse and happy team of professional cleaners in uniform, smiling and standing together with cleaning equipment, bright and modern office background." />
+                        </div>
+                        <div class="absolute -bottom-8 -right-8 w-48 h-48 rounded-2xl overflow-hidden border-8 border-oli-cream shadow-2xl">
+                            <div class="w-full h-full bg-oli-green flex items-center justify-center cursor-pointer group">
+                                <i class="fa-solid fa-play text-white text-5xl transform group-hover:scale-125 transition-transform duration-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <h2 class="text-4xl font-bold font-display text-oli-purple mb-4">About Oli Cleaning Services</h2>
+                        <p class="text-lg text-gray-700 mb-4">Founded with a passion for pristine spaces, Oli Cleaning Services has grown into a trusted name for both commercial and residential clients. Our mission is simple: to provide reliable, high-quality cleaning services that exceed expectations every time.</p>
+                        <p class="text-gray-600 mb-6">Our dedicated team is fully trained, insured, and committed to using eco-friendly products wherever possible, ensuring a safe and healthy environment for you, your family, and your employees.</p>
+                        <a href="#" class="bg-oli-purple text-white px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition-colors duration-300">Meet Our Team</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Hire Us Section -->
+        <section id="why-hire-us" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold font-display text-oli-purple mb-4">Why Choose Oli Cleaning?</h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">We're not just cleaners; we're partners in maintaining the health and beauty of your space. Here’s what sets us apart.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div id="feature-1" class="text-center p-6 border border-gray-200 rounded-xl hover:shadow-xl transition-shadow duration-300">
+                        <div class="bg-oli-green text-white text-3xl w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-oli-purple mb-2">Trusted & Insured</h3>
+                        <p class="text-gray-600">Rest easy knowing our entire team is fully vetted, insured, and bonded for your complete peace of mind.</p>
+                    </div>
+                    <div id="feature-2" class="text-center p-6 border border-gray-200 rounded-xl hover:shadow-xl transition-shadow duration-300">
+                        <div class="bg-oli-green text-white text-3xl w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-oli-purple mb-2">Eco-Friendly Products</h3>
+                        <p class="text-gray-600">We use high-quality, environmentally friendly cleaning supplies that are safe for pets, children, and the planet.</p>
+                    </div>
+                    <div id="feature-3" class="text-center p-6 border border-gray-200 rounded-xl hover:shadow-xl transition-shadow duration-300">
+                        <div class="bg-oli-green text-white text-3xl w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-oli-purple mb-2">Satisfaction Guarantee</h3>
+                        <p class="text-gray-600">Your happiness is our priority. If you're not 100% satisfied, we'll come back and make it right.</p>
+                    </div>
+                    <div id="feature-4" class="text-center p-6 border border-gray-200 rounded-xl hover:shadow-xl transition-shadow duration-300">
+                        <div class="bg-oli-green text-white text-3xl w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-oli-purple mb-2">Flexible Scheduling</h3>
+                        <p class="text-gray-600">We offer convenient, flexible scheduling options including one-time, weekly, bi-weekly, and monthly services.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-hire-us" class="py-20 bg-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold text-brand-purple mb-4">Why Hire Us?</h2>
+                <p class="max-w-3xl mx-auto text-gray-600 mb-12">We deliver more than just a clean space. We provide peace of mind, reliability, and a commitment to excellence that sets us apart.</p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <div class="h-56 overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/3493dc68ad-86efe9ef13070ef69b53.png" alt="Close-up of a gloved hand using an eco-friendly spray to clean a glass surface, sparkling clean" />
+                        </div>
+                        <div class="p-6 text-left">
+                            <h3 class="font-bold text-xl mb-2 text-brand-dark-green">Eco-Friendly Products</h3>
+                            <p class="text-gray-600">We use safe, non-toxic, and effective cleaning solutions that are better for your family, pets, and the environment.</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 (Video) -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group relative">
+                        <div class="h-56 overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/882da504cc-35f45de1d1b57c923a9d.png" alt="A team of uniformed cleaners posing proudly with their equipment in a brightly lit office" />
+                        </div>
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                            <button class="bg-white/30 backdrop-blur-sm text-white h-16 w-16 rounded-full flex items-center justify-center hover:bg-white/50 transition-all"><i class="fa-solid fa-play text-2xl ml-1"></i></button>
+                        </div>
+                        <div class="p-6 text-left">
+                            <h3 class="font-bold text-xl mb-2 text-brand-dark-green">Vetted Professionals</h3>
+                            <p class="text-gray-600">Our team is rigorously background-checked, trained, and fully insured for your complete peace of mind.</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                         <div class="h-56 overflow-hidden">
+                             <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/1541b6d2a2-5459b883610d8f9e751e.png" alt="A digital calendar on a tablet showing flexible booking slots, modern and clean interface" />
+                         </div>
+                         <div class="p-6 text-left">
+                             <h3 class="font-bold text-xl mb-2 text-brand-dark-green">Flexible Scheduling</h3>
+                             <p class="text-gray-600">Book, manage, and reschedule your cleanings effortlessly online, with same-week availability.</p>
+                         </div>
+                    </div>
+                     <!-- Card 4 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <div class="h-56 overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/2850c1e50c-07718968419ff5d832d8.png" alt="A satisfaction guarantee seal or badge, professionally designed with a checkmark and stars" />
+                        </div>
+                        <div class="p-6 text-left">
+                            <h3 class="font-bold text-xl mb-2 text-brand-dark-green">Satisfaction Guaranteed</h3>
+                            <p class="text-gray-600">If you're not 100% satisfied, we'll come back and re-clean for free. Your happiness is our priority.</p>
+                        </div>
+                    </div>
+                     <!-- Card 5 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                         <div class="h-56 overflow-hidden">
+                             <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/f067137803-32bbf8ad95d90727d515.png" alt="A cleaner using a high-efficiency particulate air (HEPA) vacuum in a medical clinic waiting room" />
+                         </div>
+                         <div class="p-6 text-left">
+                             <h3 class="font-bold text-xl mb-2 text-brand-dark-green">Advanced Equipment</h3>
+                             <p class="text-gray-600">We use HEPA vacuums and medical-grade disinfectants to ensure the deepest, most hygienic clean possible.</p>
+                         </div>
+                    </div>
+                     <!-- Card 6 (Video) -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group relative">
+                         <div class="h-56 overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/492d6ee9d7-cfd8d9bdf14c9f6b8999.png" alt="A friendly customer support agent with a headset smiling, bright and welcoming office background" />
+                         </div>
+                         <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                            <button class="bg-white/30 backdrop-blur-sm text-white h-16 w-16 rounded-full flex items-center justify-center hover:bg-white/50 transition-all"><i class="fa-solid fa-play text-2xl ml-1"></i></button>
+                         </div>
+                         <div class="p-6 text-left">
+                             <h3 class="font-bold text-xl mb-2 text-brand-dark-green">Dedicated Support</h3>
+                             <p class="text-gray-600">Our customer service team is always ready to assist you with any questions or special requests.</p>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How Oli Maid Can Help Section -->
+        <section id="how-oli-can-help" class="py-20 bg-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold text-brand-purple mb-4">How Oli Maid Can Help</h2>
+                <p class="max-w-3xl mx-auto text-gray-600 mb-12">From daily upkeep to specialized deep cleans, we offer a comprehensive suite of services designed to make your space shine and give you back your valuable time.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-left space-y-4">
+                        <div class="h-64 rounded-lg overflow-hidden shadow-lg">
+                            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/b13d24fa14-c3260a30596f439e671f.png" alt="A pristine corporate office after a professional cleaning, with gleaming floors and organized desks, bright modern interior" />
+                        </div>
+                        <h3 class="font-bold text-xl text-brand-dark-green">Immaculate Workspaces</h3>
+                        <p class="text-gray-600">Boost productivity and impress clients with a consistently clean and professional office environment.</p>
+                    </div>
+                    <div class="text-left space-y-4">
+                        <div class="h-64 rounded-lg overflow-hidden shadow-lg">
+                            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/1c956d510b-60ac9d39501d6ef5df1e.png" alt="A sanitized and sterile-looking medical examination room, highlighting cleanliness and hygiene" />
+                        </div>
+                        <h3 class="font-bold text-xl text-brand-dark-green">Hygienic Medical Facilities</h3>
+                        <p class="text-gray-600">Ensure patient safety and compliance with our specialized cleaning for small medical clinics.</p>
+                    </div>
+                    <div class="text-left space-y-4">
+                        <div class="h-64 rounded-lg overflow-hidden shadow-lg">
+                            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/d39505d6b4-e0f4f91351e6814901ec.png" alt="A cozy and spotless living room, with sunlight streaming in, looking fresh and inviting" />
+                        </div>
+                        <h3 class="font-bold text-xl text-brand-dark-green">Spotless Homes</h3>
+                        <p class="text-gray-600">Enjoy a healthier, more comfortable living space with our recurring or one-time home cleaning services.</p>
+                    </div>
+                    <div class="text-left space-y-4">
+                        <div class="h-64 rounded-lg overflow-hidden shadow-lg">
+                            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/362a389b16-f3ea6de4c02deefdfd48.png" alt="An empty apartment with sparkling clean floors and windows, ready for new occupants" />
+                        </div>
+                        <h3 class="font-bold text-xl text-brand-dark-green">Stress-Free Moves</h3>
+                        <p class="text-gray-600">Secure your deposit or prepare your new home with our thorough move-in/out cleaning services.</p>
+                    </div>
+                </div>
+                <div class="mt-12">
+                    <a href="#" class="inline-block bg-brand-green text-white font-bold py-3 px-8 rounded-md hover:bg-opacity-90 transition-colors">Learn More About Our Process</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Commercial/Office Spotlight Section -->
+        <section id="service-spotlight" class="py-24">
+            <div class="container mx-auto px-6">
+                <!-- Commercial Spotlight -->
+                <div id="commercial-spotlight" class="flex flex-col md:flex-row items-center gap-12 mb-20">
+                    <div class="md:w-1/2">
+                        <span class="text-oli-green font-bold">FOR BUSINESSES</span>
+                        <h2 class="text-4xl font-bold font-display text-oli-purple my-3">Pristine Commercial Spaces</h2>
+                        <p class="text-gray-700 mb-6">A clean workspace boosts productivity and leaves a lasting impression on clients. Our commercial services cover everything from daily office upkeep to specialized cleaning for medical facilities, ensuring your business always looks its best.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-oli-green mr-3"></i>Customized Office Cleaning Plans</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-oli-green mr-3"></i>HIPAA-Compliant Medical Facility Cleaning</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-oli-green mr-3"></i>Reliable, Professional & Discreet Staff</li>
+                        </ul>
+                        <a href="#" class="bg-oli-purple text-white px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition-colors duration-300">Explore Commercial Services</a>
+                    </div>
+                    <div class="md:w-1/2 h-96 rounded-2xl overflow-hidden shadow-xl">
+                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/e0b35f8c02-6d84a7fb2b50b21bfde8.png" alt="A modern, clean, and empty corporate office boardroom with a long polished table and city view through large windows. Professional cleaning service result." />
+                    </div>
+                </div>
+                <!-- Office Spotlight -->
+                <div id="residential-spotlight" class="flex flex-col md:flex-row-reverse items-center gap-12">
+                    <div class="md:w-1/2">
+                        <span class="text-oli-green font-bold">FOR Office</span>
+                        <h2 class="text-4xl font-bold font-display text-oli-purple my-3">A Office That Sparkles</h2>
+                        <p class="text-gray-700 mb-6">Reclaim your time and enjoy a spotless home without the hassle. Whether you need a regular clean, a one-time deep clean, or help with moving, our residential team provides meticulous service tailored to your home's needs.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-oli-green mr-3"></i>Standard, Deep & Move-In/Out Cleaning</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-oli-green mr-3"></i>Kitchen & Bathroom Sanitization</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-oli-green mr-3"></i>Trustworthy and Pet-Friendly Cleaners</li>
+                        </ul>
+                        <a href="#" class="bg-oli-green text-white px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition-colors duration-300">Explore Residential Services</a>
+                    </div>
+                    <div class="md:w-1/2 h-96 rounded-2xl overflow-hidden shadow-xl">
+                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/4012a39fff-812e0f2ebfadafc09575.png" alt="A beautifully clean and tidy modern kitchen with stainless steel appliances and sparkling countertops. Domestic cleaning service result." />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Small Medical facility /Residential Spotlight Section -->
+        <section id="service-spotlight" class="py-24">
+            <div class="container mx-auto px-6">
+                <!-- Small Medical facility  -->
+                <div id="commercial-spotlight" class="flex flex-col md:flex-row items-center gap-12 mb-20">
+                    <div class="md:w-1/2">
+                        <span class="text-oli-green font-bold">FOR Small Medical facility </span>
+                        <h2 class="text-4xl font-bold font-display text-oli-purple my-3">Pristine Small Medical facility </h2>
+                        <p class="text-gray-700 mb-6">A clean workspace boosts productivity and leaves a lasting impression on clients. Our commercial services cover everything from daily office upkeep to specialized cleaning for medical facilities, ensuring your business always looks its best.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-oli-green mr-3"></i>Customized Office Cleaning Plans</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-oli-green mr-3"></i>HIPAA-Compliant Medical Facility Cleaning</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-oli-green mr-3"></i>Reliable, Professional & Discreet Staff</li>
+                        </ul>
+                        <a href="#" class="bg-oli-purple text-white px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition-colors duration-300">Explore Commercial Services</a>
+                    </div>
+                    <div class="md:w-1/2 h-96 rounded-2xl overflow-hidden shadow-xl">
+                        <img class="w-full h-full object-cover" src="https://www.issa.com/wp-content/uploads/2025/02/GettyImages-2167874889.jpg" alt="A modern, clean, and empty corporate office boardroom with a long polished table and city view through large windows. Professional cleaning service result." />
+                    </div>
+                </div>
+                <!-- Residential Spotlight -->
+                <div id="residential-spotlight" class="flex flex-col md:flex-row-reverse items-center gap-12">
+                    <div class="md:w-1/2">
+                        <span class="text-oli-green font-bold">FOR HOMES</span>
+                        <h2 class="text-4xl font-bold font-display text-oli-purple my-3">A Home That Sparkles</h2>
+                        <p class="text-gray-700 mb-6">Reclaim your time and enjoy a spotless home without the hassle. Whether you need a regular clean, a one-time deep clean, or help with moving, our residential team provides meticulous service tailored to your home's needs.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-oli-green mr-3"></i>Standard, Deep & Move-In/Out Cleaning</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-oli-green mr-3"></i>Kitchen & Bathroom Sanitization</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check-circle text-oli-green mr-3"></i>Trustworthy and Pet-Friendly Cleaners</li>
+                        </ul>
+                        <a href="#" class="bg-oli-green text-white px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition-colors duration-300">Explore Residential Services</a>
+                    </div>
+                    <div class="md:w-1/2 h-96 rounded-2xl overflow-hidden shadow-xl">
+                        <img class="w-full h-full object-cover" src="https://techsquadteam.com/assets/profile/blogimages/42b5a1db390e24f435734e8a1d6abcc9.jpg" alt="A beautifully clean and tidy modern kitchen with stainless steel appliances and sparkling countertops. Domestic cleaning service result." />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote/Contact Section -->
+        <section id="quote-contact-section" class="py-20 bg-oli-dark-green text-white">
+            <div class="container mx-auto px-6">
+                <div class="bg-white/10 p-12 rounded-2xl flex flex-col lg:flex-row items-center justify-between gap-8">
+                    <div class="lg:w-2/3 text-center lg:text-left">
+                        <h2 class="text-4xl font-bold font-display mb-3">Ready for a Cleaner Space?</h2>
+                        <p class="text-lg opacity-80">Let's get started! Contact us today for a free, no-obligation quote tailored to your specific cleaning needs. We're here to answer any questions you may have.</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#" class="bg-oli-green text-white px-8 py-4 text-center rounded-full font-bold text-lg hover:bg-opacity-90 transform hover:scale-105 transition-all duration-300 shadow-xl whitespace-nowrap">Request a Quote</a>
+                        <a href="#" class="bg-white text-oli-purple px-8 py-4 text-center rounded-full font-bold text-lg hover:bg-oli-cream transform hover:scale-105 transition-all duration-300 shadow-xl whitespace-nowrap">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Blog Section -->
+        <section id="blog-preview" class="py-24 bg-oli-cream">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold font-display text-oli-purple mb-4">From Our Blog</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Get expert cleaning tips, company news, and special promotions right from our blog.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div id="blog-card-1" class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                        <div class="h-56 overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/73e4e262f5-ee0cf782ab3e6fa6b464.png" alt="Close-up of cleaning supplies like spray bottles and microfiber cloths on a clean surface, soft lighting, cleaning tips blog post." />
+                        </div>
+                        <div class="p-6">
+                            <span class="text-sm text-oli-green font-bold">CLEANING TIPS</span>
+                            <h3 class="text-xl font-bold font-display text-oli-purple my-2">5 Eco-Friendly Cleaning Hacks for Your Kitchen</h3>
+                            <p class="text-gray-600 text-sm mb-4">Discover how to make your kitchen sparkle using natural ingredients you already have at home.</p>
+                            <a href="#" class="font-bold text-oli-purple hover:underline">Read More <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                    <div id="blog-card-2" class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                        <div class="h-56 overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/3491a17371-005be0b3363305630127.png" alt="A professional cleaner in uniform carefully dusting a modern office plant, focus on detail and care, company news blog post." />
+                        </div>
+                        <div class="p-6">
+                            <span class="text-sm text-oli-green font-bold">COMPANY NEWS</span>
+                            <h3 class="text-xl font-bold font-display text-oli-purple my-2">Oli Cleaning Expands to New Locations!</h3>
+                            <p class="text-gray-600 text-sm mb-4">We're excited to announce that our top-rated cleaning services are now available in more areas.</p>
+                            <a href="#" class="font-bold text-oli-purple hover:underline">Read More <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                    <div id="blog-card-3" class="bg-white rounded-xl shadow-lg overflow-hidden group">
+                        <div class="h-56 overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/ab2b840bc1-bfb8de4c49d7e266aa62.png" alt="A calendar with a marked date and a piggy bank next to it, concept of saving money on cleaning services, promotions blog post." />
+                        </div>
+                        <div class="p-6">
+                            <span class="text-sm text-oli-green font-bold">PROMOTIONS</span>
+                            <h3 class="text-xl font-bold font-display text-oli-purple my-2">Get 20% Off Your First Deep Cleaning Service</h3>
+                            <p class="text-gray-600 text-sm mb-4">New customers can enjoy a special discount on our most comprehensive cleaning package. Book now!</p>
+                            <a href="#" class="font-bold text-oli-purple hover:underline">Read More <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!-- Contact Section -->
+        <section id="contact-us" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto bg-oli-cream p-8 sm:p-12 rounded-lg shadow-lg grid md:grid-cols-2 gap-12">
+                    <div class="space-y-6">
+                        <h2 class="text-3xl font-bold text-brand-purple">Get in Touch</h2>
+                        <p class="text-gray-600">Have questions or ready to book? Contact us today! Our team is ready to assist you with all your cleaning needs. Get a free, no-obligation quote online in minutes.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-brand-green/10 text-brand-green h-12 w-12 rounded-full flex items-center justify-center">
+                                    <i class="fa-solid fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Our Headquarters</h4>
+                                    <p class="text-gray-600">123 Clean St, Suite 100, Sparkle City, USA 90210</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-brand-green/10 text-brand-green h-12 w-12 rounded-full flex items-center justify-center">
+                                    <i class="fa-solid fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Email Us</h4>
+                                    <p class="text-gray-600">contact@oliservices.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-brand-green/10 text-brand-green h-12 w-12 rounded-full flex items-center justify-center">
+                                    <i class="fa-solid fa-phone text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Call Us</h4>
+                                    <p class="text-gray-600">(123) 456-7890</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="contact-form" class="space-y-4">
+                        <h3 class="text-2xl font-bold text-brand-dark-green">Request a Free Quote</h3>
+                        <form action="#" method="POST" class="space-y-4">
+                            <div>
+                                <label for="name" class="sr-only">Full Name</label>
+                                <input type="text" name="name" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-brand-purple focus:border-brand-purple" placeholder="Full Name" required>
+                            </div>
+                            <div>
+                                <label for="email" class="sr-only">Email Address</label>
+                                <input type="email" name="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-brand-purple focus:border-brand-purple" placeholder="Email Address" required>
+                            </div>
+                             <div>
+                                <label for="service" class="sr-only">Service Type</label>
+                                <select id="service" name="service" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-brand-purple focus:border-brand-purple text-gray-500" required>
+                                    <option value="" disabled selected>Select a Service</option>
+                                    <option value="commercial">Commercial Cleaning</option>
+                                    <option value="office">Office Cleaning</option>
+                                    <option value="medical">Small Medical Facility</option>
+                                    <option value="residential">Residential Cleaning</option>
+                                    <option value="standard">Standard Home Cleaning</option>
+                                    <option value="deep">Deep Cleaning</option>
+                                    <option value="move">Move-in/out Cleaning</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message" class="sr-only">Message</label>
+                                <textarea name="message" id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-brand-purple focus:border-brand-purple" placeholder="Tell us about your cleaning needs..."></textarea>
+                            </div>
+                            <button class="text-oli-text hover:text-oli-purple transition-colors duration-300">
+                    </button>
+                    <button class="bg-oli-purple text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-opacity-90 transition-all duration-300 shadow-lg">
+                        Submit Request
+                    </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- Footer -->
+    <footer id="footer" class="bg-oli-dark-green text-white">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div id="footer-about" class="md:col-span-2 lg:col-span-1">
+                    <img class="h-20 w-auto mb-8" src="https://leanlivingjourney.com/wp-content/uploads/2025/11/LLLL-1.png" alt="Oli Cleaning Services logo, horizontal version, vibrant green and purple script on a transparent background." />
+                    <p class="text-gray-300 text-sm">Your trusted partner for commercial and residential cleaning. We deliver sparkling results with a commitment to quality and customer satisfaction.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div id="footer-links-services">
+                    <h4 class="font-bold text-lg mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-300 hover:text-white">Commercial Cleaning</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Residential Cleaning</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Office Cleaning</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Deep Cleaning</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Move-In/Out Cleaning</a></li>
+                    </ul>
+                </div>
+                <div id="footer-links-company">
+                    <h4 class="font-bold text-lg mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Why Hire Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Locations</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div id="footer-contact">
+                    <h4 class="font-bold text-lg mb-4">Contact Info</h4>
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li class="flex items-start"><i class="fa-solid fa-location-dot mt-1 mr-3"></i><span>123 Clean St, Sparkle City, USA</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-phone mt-1 mr-3"></i><span>(555) 123-4567</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-envelope mt-1 mr-3"></i><span>contact@oliservices.com</span></li>
+                        <h4 class="font-bold text-white mt-6 mb-4">We Accept</h4>
+                    <div class="flex space-x-2">
+                        <i class="fa-brands fa-cc-visa text-3xl text-gray-400"></i>
+                        <i class="fa-brands fa-cc-mastercard text-3xl text-gray-400"></i>
+                        <i class="fa-brands fa-cc-amex text-3xl text-gray-400"></i>
+                        <i class="fa-brands fa-cc-paypal text-3xl text-gray-400"></i>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-white/10 text-center text-sm text-gray-400">
+                <p>Copyright &copy; 2025 Oli Cleaning Services. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
